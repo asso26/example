@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tilt_wrap{
+            position: relative;
+            left: 300px; top: 300px;
+            width: 700px;
+            display: flex;
+            gap: 30px;
+        }
+        .tiltEle{
+            perspective: 600px;
+            transform-style: preserve-3d;
+            background-color: skyblue;
+        width: 200px; height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .child{
+            transform: translateZ(50px);
+            width: 100px; height: 100px;
+            /* background-color: pink; */
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tilt_wrap">
+        <div class="tiltEle">
+            <div class="child">child</div>
+        </div>
+    
+        <div class="tiltEle">
+            <div class="child">child</div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".tiltEle"), {
+		max: 15,
+		speed: 200
+	});
+	
+	//It also supports NodeList
+	//VanillaTilt.init(document.querySelectorAll(".your-element"));
+</script>
+</body>
+</html>

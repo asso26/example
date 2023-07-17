@@ -1,0 +1,17 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+.moniter_wrap{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 400px;
+    height: 260px;
+    background: url(screen.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+    border: 1px solid #ccc;
+    transition: 0.8s;
+}
+.moniter_wrap:hover{
+    background-position: bottom;
+}
