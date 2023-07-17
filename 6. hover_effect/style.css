@@ -1,0 +1,10 @@
+.hover_effect{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover_effect .my-div{
+    width: 500px; height: 600px;
+}

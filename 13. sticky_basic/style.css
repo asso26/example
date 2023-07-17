@@ -1,0 +1,30 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+/*  sticky에서는 position:sticky의 주체의 부모들은
+overflow:hidden이 있어서는 안됨 */
+
+.main{}
+.main .row{display: flex;
+background-color: beige;
+width: 100%;
+}
+.main .row .col{
+    border: 1px solid red;
+    width: 20%; height: 300vh;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.main .row .col .child{
+    position: sticky;
+    top: 0;
+    width: 80%;height: 200px;
+background-color: aquamarine;
+
+}
+.main .row .col:nth-child(1){padding-top: 10%;}
+.main .row .col:nth-child(2){padding-top: 20%;}
+.main .row .col:nth-child(3){padding-top: 30%;}
+.main .row .col:nth-child(4){padding-top: 40%;}
+.main .row .col:nth-child(5){padding-top: 50%;}

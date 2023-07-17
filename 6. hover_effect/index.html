@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="hover_effect">
+        <div class="my-div"></div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/hover-effect.umd.js"></script>
+    <script>
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.my-div'),
+            intensity: 0.3,
+            image1: 'https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86883/86883214342_727.jpg',
+            image2: 'https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86883/86883214341_727.jpg',
+            displacementImage: 'img/displacement/3.jpg',
+            imagesRatio:400/300
+        });
+    </script>
+</body>
+</html>

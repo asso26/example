@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- https://www.cssscript.com/demo/realistic-water-ripple-effect/ -->
+
+    <div class="demo-btn">
+		<h1>Using Start/Stop</h1>
+		<div class="balloon-ctr">
+			<div class='div5 demo'></div>
+			<div class="controls">
+				<button class="start control btn btn_primary">Start</span>
+				<button class="stop control btn btn_primary">Stop</span>
+			</div>
+		</div>
+	</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="js/ripple-effect.min.js"></script>
+    <script>
+        var ripple6 = new RippleEffect({
+			parent: document.querySelector('.div5'),
+			texture: 'https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86883/86883214000_727.jpg',
+			intensity: 1.0,
+			strength: .2,
+			waveSpeed: 0.008,
+			hover: false
+		});
+		document.querySelector('.start').addEventListener('click', ripple6.start);
+		document.querySelector('.start').click();
+		document.querySelector('.stop').addEventListener('click', ripple6.stop);
+		document.querySelector('.div5').addEventListener('mouseenter', ripple6.stop);
+		document.querySelector('.div5').addEventListener('mouseleave', ripple6.start);
+
+		
+    </script>
+</body>
+</html>
